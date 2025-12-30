@@ -18,6 +18,7 @@ export default function BlogDetail() {
         const response = await request.json();
 
         setAnime(response.data);
+        document.title = response.data.title;
       } catch (error) {
         console.error("Error fetching anime data ...");
       } finally {

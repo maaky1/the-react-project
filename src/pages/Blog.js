@@ -6,6 +6,7 @@ export default function Blog() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    document.title = "Blog Page";
     async function getAnimes() {
       try {
         const request = await fetch("https://api.jikan.moe/v4/top/anime?sfw");
